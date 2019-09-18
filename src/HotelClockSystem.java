@@ -5,6 +5,10 @@ import java.util.Map;
 public class HotelClockSystem {
     private Map<String, Clock> cityClocks = new HashMap<>();
 
+    public Map<String, Clock> getCityClocks() {
+        return cityClocks;
+    }
+
     public void addClock(String name, Clock clock) {
         cityClocks.put(name, clock);
     }

@@ -12,7 +12,7 @@ public class PhoneClock extends Clock {
     public void setLocalDateTime(LocalDateTime localDateTime) {
         super.localDateTime = localDateTime;
         if (hotelClockSystem != null) {
-            hotelClockSystem.updateCityClocksWithUTCZeroTime(localDateTime.plusHours(super.UTCOffset));
+            hotelClockSystem.updateCityClocksWithUTCZeroTime(localDateTime.plusHours(-1 * super.UTCOffset));
         }
     }
 

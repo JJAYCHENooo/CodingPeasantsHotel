@@ -1,6 +1,11 @@
 import java.time.LocalDateTime;
 
 public class Clock {
+    public static final int UTCOffset_BeiJing = 8;
+    public static final int UTCOffset_Moscow = 4;
+    public static final int UTCOffset_Sydney = 10;
+    public static final int UTCOffset_NewYork = -5;
+
 
     /* protected 可以被继承的子类看到 */
     protected int UTCOffset;
@@ -18,16 +23,3 @@ public class Clock {
         this.localDateTime = localDateTime;
     }
 }
-
-
-
-
-
-//    public static void main(String[] args) {
-////        LocalDate date = LocalDate.now();
-////        date = date.plusDays(20);
-////        System.out.println(date.toString());
-//        LocalDateTime localDateTime = LocalDateTime.now();
-//        localDateTime = localDateTime.plusHours(-1);
-//        System.out.println(localDateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")));
-//    }
