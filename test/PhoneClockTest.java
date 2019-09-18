@@ -20,7 +20,7 @@ class PhoneClockTest {
 
         PhoneClock phoneClock = new PhoneClock(Clock.UTCOffset_BeiJing);
         phoneClock.setHotelClockSystem(hotelClockSystem);
-        LocalDateTime now = LocalDateTime.now();
+        LocalDateTime now = LocalDateTime.now(); // 现在是北京时间
         LocalDateTime UTC = now.plusHours(-Clock.UTCOffset_BeiJing);
         phoneClock.setLocalDateTime(now);
 

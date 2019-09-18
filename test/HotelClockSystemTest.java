@@ -30,12 +30,12 @@ class HotelClockSystemTest {
         Clock clock_NewYork = new Clock(Clock.UTCOffset_NewYork);
         hotelClockSystem.addClock("纽约", clock_NewYork);
 
-        LocalDateTime now = LocalDateTime.now();
-        hotelClockSystem.updateCityClocksWithUTCZeroTime(now);
+        LocalDateTime UTCDateTime = LocalDateTime.now(); // 取现在的时间为一个 UTCDateTime，尽管测试时 now 是北京时区的时间，但是不影响函数功能的判断
+        hotelClockSystem.updateCityClocksWithUTCZeroTime(UTCDateTime);
 
-        assertEquals(now.plusHours(Clock.UTCOffset_BeiJing), hotelClockSystem.getCityClocks().get("北京").localDateTime);
-        assertEquals(now.plusHours(Clock.UTCOffset_Moscow), hotelClockSystem.getCityClocks().get("莫斯科").localDateTime);
-        assertEquals(now.plusHours(Clock.UTCOffset_Sydney), hotelClockSystem.getCityClocks().get("悉尼").localDateTime);
-        assertEquals(now.plusHours(Clock.UTCOffset_NewYork), hotelClockSystem.getCityClocks().get("纽约").localDateTime);
+        assertEquals(UTCDateTime.plusHours(Clock.UTCOffset_BeiJing), hotelClockSystem.getCityClocks().get("北京").localDateTime);
+        assertEquals(UTCDateTime.plusHours(Clock.UTCOffset_Moscow), hotelClockSystem.getCityClocks().get("莫斯科").localDateTime);
+        assertEquals(UTCDateTime.plusHours(Clock.UTCOffset_Sydney), hotelClockSystem.getCityClocks().get("悉尼").localDateTime);
+        assertEquals(UTCDateTime.plusHours(Clock.UTCOffset_NewYork), hotelClockSystem.getCityClocks().get("纽约").localDateTime);
     }
 }
