@@ -14,6 +14,7 @@
 
 ```java
 @Test
+@DisplayName("Add a clock to hotelClockSystem and check it")
 void addClock() {
 	  HotelClockSystem hotelClockSystem = new HotelClockSystem();
   	Clock clock_BeiJing = new Clock(Clock.UTCOffset_BeiJing);
@@ -32,6 +33,7 @@ void addClock() {
 
 ```java
 @Test
+@DisplayName("Provide a UTCZeroTime to update all the clocks and check it.")
 void updateCityClocksWithUTCZeroTime() {
     HotelClockSystem hotelClockSystem = new HotelClockSystem();
     Clock clock_BeiJing = new Clock(Clock.UTCOffset_BeiJing);
@@ -67,6 +69,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class PhoneClockTest {
 
   @Test
+ @DisplayName("Set the PhoneClock's localDateTime and check whether the clocks in the hotel have been synchronized.")
   void setLocalDateTime() {
     	HotelClockSystem hotelClockSystem = new HotelClockSystem();
     	Clock clock_BeiJing = new Clock(Clock.UTCOffset_BeiJing);
