@@ -1,3 +1,5 @@
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDateTime;
@@ -7,6 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class PhoneClockTest {
 
     @Test
+    @DisplayName("Set the PhoneClock's localDateTime and check whether the clocks in the hotel has been synchronized.")
     void setLocalDateTime() {
         HotelClockSystem hotelClockSystem = new HotelClockSystem();
         Clock clock_BeiJing = new Clock(Clock.UTCOffset_BeiJing);

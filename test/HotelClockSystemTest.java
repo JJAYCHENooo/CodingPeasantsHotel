@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDateTime;
@@ -7,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class HotelClockSystemTest {
 
     @Test
+    @DisplayName("Add a clock to hotelClockSystem and check it")
     void addClock() {
         HotelClockSystem hotelClockSystem = new HotelClockSystem();
         Clock clock_BeiJing = new Clock(Clock.UTCOffset_BeiJing);
@@ -19,6 +21,7 @@ class HotelClockSystemTest {
     }
 
     @Test
+    @DisplayName("Provide a UTCZeroTime to update all the clocks and check it.")
     void updateCityClocksWithUTCZeroTime() {
         HotelClockSystem hotelClockSystem = new HotelClockSystem();
         Clock clock_BeiJing = new Clock(Clock.UTCOffset_BeiJing);
