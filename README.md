@@ -8,7 +8,17 @@
 
 
 
+# Development Configuration
+
+macOS Mojave 10.14.6
+
+Java 12 + IDEA 2019.2.2
+
+
+
 # Unit Test
+
+以下测试均在 `Junit 5` 中编写、测试。脚本文件位于`\test`中，采用并行目录结构。测试过程中发现的 Defect 已在 issues 中提出并声明。
 
 #### HotelClockSystemTest_addClock
 
@@ -69,7 +79,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class PhoneClockTest {
 
   @Test
- @DisplayName("Set the PhoneClock's localDateTime and check whether the clocks in the hotel have been synchronized.")
+  @DisplayName("Set the PhoneClock's localDateTime and check whether the clocks in the hotel have been synchronized.")
   void setLocalDateTime() {
     	HotelClockSystem hotelClockSystem = new HotelClockSystem();
     	Clock clock_BeiJing = new Clock(Clock.UTCOffset_BeiJing);
